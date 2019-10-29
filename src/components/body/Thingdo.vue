@@ -1,5 +1,6 @@
 <template>
   <div>
+    <span>要做的</span>
     <ElTable :data="tableData"
              @cell-mouse-enter="mouseEnter"
              @cell-click="colClick">
@@ -9,9 +10,7 @@
           <ElInput @keydown.native="keydown($event, scope.row)"
                    v-if="scope.row.todoEdit"
                    v-model="scope.row.todo"></ElInput>
-          <ElInput v-else
-                   disabled
-                   v-model="scope.row.todo"></ElInput>
+          <span v-else>{{scope.row.todo}}</span>
         </template>
 
       </ElTableColumn>

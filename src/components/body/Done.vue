@@ -1,6 +1,8 @@
 <template>
   <div>
-    <ElTable :data="TableColumn">
+
+    <span>该做的</span>
+    <ElTable :data="doneData">
       <ElTableColumn label="想干啥"></ElTableColumn>
       <ElTableColumn label="干到哪"></ElTableColumn>
       <ElTableColumn label="哪天"></ElTableColumn>
@@ -10,13 +12,27 @@
 </template>
 
 <script>
+
 export default {
   name: "",
-  components: {},
+  components: {
+
+  },
   props: {},
   data () {
     return {
-      tableData: []
+      doneData: [],
+      myArray: [{
+        id: 'o',
+        name: 'c1'
+      },
+      {
+        id: 'n',
+        name: 'c2'
+      }, {
+        id: 'e',
+        name: 'c3'
+      }]
     }
   },
   watch: {},
